@@ -1,0 +1,65 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic);
+
+body {
+	font-family: Raleway, Lato, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+
+
+h1, h2, nav {
+	font-family: Montserrat, Raleway, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	text-align: right;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+li {
+	display: inline;
+	padding: 1em;
+	font-size: 16px;
+	font-variant: small-caps;
+}
+
+footer a {
+	font-variant: small-caps;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+ nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
+	text-decoration: none;
+	color: #555;
+}
+
+nav li:hover, nav a:hover {
+	color: #222;
+}
+
+h1 {
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	width: 100%;
+}
