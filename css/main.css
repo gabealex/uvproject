@@ -58,6 +58,51 @@ h1 {
 	padding-bottom: 1em;
 }
 
+
+#healthyvillages {
+	height: 350px;
+	width:350px;
+	color: white;
+	background-image: url("../img/transform2.jpg");
+}
+
+
+#safewater {
+	height: 350px;
+	width:350px;
+	color: white;
+	background-image: url("../img/sanitation2.jpg");
+}
+
+#obfi {
+	height: 350px;
+	width:350px;
+	color: white;
+	background-image: url("../img/kids_soccer.jpg");
+	background-position: fixed;
+}
+
+#overlay1 {
+	height: 350px;
+	width:350px;
+   background-color: black;
+   opacity: 0.6;
+}
+
+#overlay2 {
+	height: 350px;
+	width:350px;
+   background-color: black;
+   opacity: 0.6;
+}
+
+#overlay3 {
+		height: 350px;
+	width:350px;
+   background-color: black;
+   opacity: 0.6;
+}
+
 footer {
 	text-align: center;
 	font-size: 12px;
