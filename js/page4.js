@@ -1,0 +1,1 @@
+var myApp = angular.module('page4App', ['ui.router'])

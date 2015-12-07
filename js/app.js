@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Create app
 var myApp = angular.module('myApp', ['ui.router'])
 // Configure app
@@ -43,3 +44,6 @@ myApp.config(function($stateProvider) {
 
 //initialize landing page app here
 var myApp = angular.module('myApp', ['ui.router'])
+=======
+var myApp = angular.module('myApp', ['ui.router'])
+>>>>>>> 93ea2aa93a8531a35e3bbcd318f4ed185768ef9b
