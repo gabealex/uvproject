@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Create app
 var myApp = angular.module('myApp', ['ui.router'])
 // Configure app
@@ -40,7 +40,5 @@ myApp.config(function($stateProvider) {
 		myApp.controller('HCController', function($scope){
 			$scope.HC = "info"
 		})
-=======
-var myApp = angular.module('myApp', ['ui.router']);
->>>>>>> d914af6a2b13f3829331d959d360fa22937fdf16
+
 
