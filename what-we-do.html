@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	
 	<!-- Read scripts -->
-	<script src="js/app.js"></script>
+	<script src="js/page2.js"></script>
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>	
 	
 </head>
@@ -41,26 +41,47 @@
 		</nav>
 		<h1>Uganda Village Project</h1>
 	</header>
-	<div id='whatWeDo' class="container">
-		<h2>What We Do</h2>
-		<p>With the help of our partners in the field, Uganda Village Project (UVP) has identified the following core programmatic areas of focus.</p>
-		<div id='healthyvillages' class="col-xs-4">
-			<div id='overlay1' class="col-xs-4">
-				<h4>Healthy Villages</h4>
-				<p>This initiative unifies UVP’s various health projects and advocacy work to provide rural health care and promote public health on a village level. Through community organizing and mobilization, this approach targets the primary health risks of the region by providing education, training and appropriate interventions to Village Health Team members, health center workers, local community leaders, and the general population.</p>
-			</div>
+	<div id = "header" class= "container">
+		<div id='HV' class="col-xs-12">
+			<h3>Healthy Villages</h3>
+			<p>"Healthy Villages" is an innovative, grassroots approach to addressing rural healthcare and public health in Uganda. Its goal is to improve the provision of healthcare and of preventative health education to underserved populations across rural Iganga District.  Healthy Villages targets the primary health risks of the region at a village-by-village level, in partnership with the District Health Office of Iganga, the Sub-County officials, and the local Health Center staff.</p>
+
+			<p>We launched Healthy Villages in five villages during the summer of 2009. To choose which villages to work in, we partnered with the District Health Office to identify communities that fell into the bottom quartile in sanitation and access to clean water in the district. We use this as our proxy for the most underserved villages in Iganga District, and continue to expand each year in the 70 identified villages. We work in each village for three years, building capacity within the community before acknowledging their accomplishments with a graduation ceremony.</p>
+	         
+	         <div id = "HVbuttons" style="text-align: center;">
+	        	<a ui-sref="atwork"class="btn btn-default">At Work</a>
+	        	<a ui-sref="comed"class="btn btn-default">Community Education</a>
+	        	<a ui-sref="HC"class="btn btn-default">Health Centers</a>
+	      	</div>
+	        <div class="container">
+	        	<!-- This is where your content will display -->
+		        <div ui-view>
+		        	
+		        </div>
+	    	</div>
 		</div>
-		<div id='safewater' class="col-xs-4">
-			<div id='overlay2' class="col-xs-4">
-				<h4>Safe Water</h4>
-				<p>UVP’s approach to safe water sources maximizes community ownership and minimizes the need for external funding. It has been highly successful in meeting the pressing needs for water in Iganga District.</p>
-			</div>
+
+
+	<!-- 	<div id ="ComEd" class="col-xs-4">
+			<h5>Community Education</h5>
+			<p>Our Healthy Villages program uses community education programs as a core component of our approach to empower rural villages to improve their own community’s health and living standards.</p>
+
+			<p>In each of our targeted Healthy Villages, which represent communities in the Iganga District with the fewest resources for health and sanitation, we partner with local drama groups and nonprofits to provide education on such topics as prevention of communicable diseases, family planning options, how to keep household water safe, and safe motherhood. We have a large and diverse group of local Ugandan partner groups who employ participatory and entertaining educational methods to engage communities in learning. Because local villagers particularly enjoy learning through dramatic performances, we have partnered with local drama groups to produce plays that raise awareness on crucial health issues through song and dance.</p>
+
+			<p>We strive to bring educational resources to the community based on the specific needs and requests of that community through the Healthy Villages model.</p>
+		</div> 
+
+	</div> -->
+
+	 
+		<div id='SW' class="col-xs-12">
+			<h3>Safe Water</h3>
+			<p>UVP's approach to safe water sources maximizes community ownership and minimizes the need for external funding. It has been highly successful in meeting the pressing needs for water in Iganga District.</p>
 		</div>
-		<div id='obfi' class="col-xs-4">
-			<div id='overlay3' class="col-xs-4">
-				<h4>Obstetric Fistula</h4>
-				<p>Fistula is one of the most devastating childbirth injuries. Prolonged obstructed labor can cause a hole in the birth canal which results in constant incontinence for the woman, isolating her from friends, family, and community. UVP promotes fistula awareness and prevention through community outreaches and brings women for surgery to heal their injury.</p>
-			</div>
+
+		<div id='OF' class="col-xs-12">
+			<h3>Obstetric Fistula</h3>
+			<p>Fistula is one of the most devastating childbirth injuries. Prolonged obstructed labor can cause a hole in the birth canal which results in constant incontinence for the woman, isolating her from friends, family, and community. UVP promotes fistula awareness and prevention through community outreaches and brings women for surgery to heal their injury.</p>
 		</div>
 	</div>
 	<footer>
