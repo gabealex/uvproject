@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Uganda Village Project</title>
+	<title>What We Do</title>
 	
 	<!-- Include libraries -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
@@ -30,20 +30,23 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="index.html#top">home</a></li>
-				<li><a href="who-we-are.html">who we are</a></li>
-				<li><a href="what-we-do.html">what we do</a></li>
-				<li><a href="where-we-work.html">where we work</a></li>
-				<li><a href="get-involved.html">get involved</a></li>
-				<li><a href='http://www.cafepress.com/uvp' target='_blank'>store</a></li>
-				<li><a href='https://donatenow.networkforgood.org/uvp?code=Website' target='_blank'>donate</a></li>
+				<li><a href="index.html#top" style="color:white;">home</a></li>
+				<li><a href="who-we-are.html"style="color:white;">who we are</a></li>
+				<li><a href="what-we-do.html"style="color:white;">what we do</a></li>
+				<li><a href="where-we-work.html"style="color:white;">where we work</a></li>
+				<li><a href="get-involved.html"style="color:white;">get involved</a></li>
+				<li><a href='http://www.cafepress.com/uvp' target='_blank'style="color:white;">store</a></li>
+				<li><a href='https://donatenow.networkforgood.org/uvp?code=Website' target='_blank'style="color:white;">donate</a></li>
 			</ul>
 		</nav>
-		<h1>Uganda Village Project</h1>
-	</header>
+  <div id ="WWDtitle" class="container">
+  <h1>What We Do</h1>
+    <p>With the help of our partners in the field, Uganda Village Project (UVP) has identified the following core programmatic areas of focus.</p></div>
+</header>
 	<div id = "header" class= "container">
 		<div id='HV' class="col-xs-12">
 			<h3>Healthy Villages</h3>
+			
 			<p>"Healthy Villages" is an innovative, grassroots approach to addressing rural healthcare and public health in Uganda. Its goal is to improve the provision of healthcare and of preventative health education to underserved populations across rural Iganga District.  Healthy Villages targets the primary health risks of the region at a village-by-village level, in partnership with the District Health Office of Iganga, the Sub-County officials, and the local Health Center staff.</p>
 
 			<p>We launched Healthy Villages in five villages during the summer of 2009. To choose which villages to work in, we partnered with the District Health Office to identify communities that fell into the bottom quartile in sanitation and access to clean water in the district. We use this as our proxy for the most underserved villages in Iganga District, and continue to expand each year in the 70 identified villages. We work in each village for three years, building capacity within the community before acknowledging their accomplishments with a graduation ceremony.</p>
@@ -54,24 +57,10 @@
 	        	<a ui-sref="HC"class="btn btn-default">Health Centers</a>
 	      	</div>
 	        <div class="container">
-	        	<!-- This is where your content will display -->
 		        <div ui-view>
-		        	
 		        </div>
 	    	</div>
 		</div>
-
-
-	<!-- 	<div id ="ComEd" class="col-xs-4">
-			<h5>Community Education</h5>
-			<p>Our Healthy Villages program uses community education programs as a core component of our approach to empower rural villages to improve their own community’s health and living standards.</p>
-
-			<p>In each of our targeted Healthy Villages, which represent communities in the Iganga District with the fewest resources for health and sanitation, we partner with local drama groups and nonprofits to provide education on such topics as prevention of communicable diseases, family planning options, how to keep household water safe, and safe motherhood. We have a large and diverse group of local Ugandan partner groups who employ participatory and entertaining educational methods to engage communities in learning. Because local villagers particularly enjoy learning through dramatic performances, we have partnered with local drama groups to produce plays that raise awareness on crucial health issues through song and dance.</p>
-
-			<p>We strive to bring educational resources to the community based on the specific needs and requests of that community through the Healthy Villages model.</p>
-		</div> 
-
-	</div> -->
 
 	 
 		<div id='SW' class="col-xs-12">
@@ -82,10 +71,21 @@
 		<div id='OF' class="col-xs-12">
 			<h3>Obstetric Fistula</h3>
 			<p>Fistula is one of the most devastating childbirth injuries. Prolonged obstructed labor can cause a hole in the birth canal which results in constant incontinence for the woman, isolating her from friends, family, and community. UVP promotes fistula awareness and prevention through community outreaches and brings women for surgery to heal their injury.</p>
+			<div id = "obfipic" class ="col-xs-4">
+				<img src="../img/obfi.jpg" style="padding-right:15px;padding-top:20px;">
+			</div>
+			<div id ="bgtext" class="col-xs-8"><h4>Background</h4>
+			<p>Virtually unheard of in wealthier nations, obstetric fistula (Latin for hole) is an affliction of the very poor, and is predominantly caused by neglected, obstructed labor. If the obstruction is unrelieved, the baby usually dies. The prolonged impaction of its head against the mother’s internal tissue results in a severe medical condition in which a hole (fistula)  develops between either the rectum and vagina  or between the bladder and vagina.  The loss of the baby, the persistent incontinence and rank odor that follows, along with many other possible complications such as infertility and chronic infection, often conspire to isolate the woman from family, society, and employment. Though a simple surgical repair can mend most cases of obstetric fistula, most women go untreated, afraid to admit to the condition or too poor to afford the repair.
+			Obstetric fistula is particularly prevalent in Sub-Saharan Africa, and Uganda has been reported to have the third-highest rate of fistula in the world.</div>
 		</div>
+
+
+<!-- 		<div  id="education" class="col-sm-6"><h4>Education</h4>
+			<p>Through our outreach to traditional birth attendants and other healthcare workers in the Iganga District, we have learned that there are widespread misconceptions about obstetric fistula — for instance, that it is incurable, and that it is caused by a sexually transmitted infection. We working to combat these misconceptions through birth attendant education, through community educational outreaches, and through community drama group performances about fistula. Drama groups are a natural source for education on health issues, and are commonly utilized by Ugandan village communities.</p></div>
+		<div id="Treatment" class="col-sm-6"><h4>Treatment</h4>
+			<p>In order to repair women with fistula, we partner with a UK-based organization called Uganda Childbirth Injuries Fund. We first identify women with obstetric fistula though a number of avenues – village outreaches, health center referrals, radio shows, and simple word-of-mouth between women.  We then transport women three times a year to “repair camps” at Kamuli Mission Hospital, where they are repaired by surgeons from Uganda Childbirth Injuries Fund. In Uganda, all hospital patients must arrive with a friend to feed, attend and nurse them, and so we also transport one attendant for each patient. After surgery, we transport the women home (an important step, because if they go home by motorcycle taxi, or walk long distances, they risk re-opening their healing fistula). Our Fistula Coordinator follows up with the women after the surgery to check on her healing and social integration.</p></div> -->
 	</div>
 	<footer>
-		<p>{this is the footer text}</p>
 	</footer>
 </body>
 </html>

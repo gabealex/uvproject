@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 // Create app
 var myApp = angular.module('myApp', ['ui.router'])
 // Configure app
@@ -14,14 +12,14 @@ myApp.config(function($stateProvider) {
 		$stateProvider
 		.state('comed', {
 			url:'/community_education',
-			templateUrl: '../templates/HV/comed.html',
+			templateUrl: '../templates/comed.html',
 			controller: 'ComEdController',
 		})
 
 		$stateProvider
 		.state('HC', {
 			url:'/healthcenters',
-			templateUrl: '../templates/HV/healthcenters.html',
+			templateUrl: '../templates/healthcenters.html',
 			controller: 'HCController',
 		})
 
@@ -43,7 +41,5 @@ myApp.config(function($stateProvider) {
 		})
 
 
-=======
 //initialize landing page app here
 var myApp = angular.module('myApp', ['ui.router'])
->>>>>>> 6aaf33ed06c8fdbfcc5281c0f23b831c6419b054
