@@ -60,6 +60,11 @@ footer a {
 	color: #555;
 }
 
+ #main-content a, #main-content a:link, #main-content a:hover, #main-content a:active, #main-content a:visited  {
+	text-decoration: none;
+	color: #000;
+}
+
 nav li:hover, nav a:hover {
 	color: #222;
 }
