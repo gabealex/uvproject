@@ -3,9 +3,7 @@ $(document).ready(function() {
 	$.extend($.scrollTo.defaults, {
 	  duration: 2000
 	});
-
-
-
+	
 	$('#click1').click(function() {
 		$('html,body').animate({
           scrollTop: 0,
