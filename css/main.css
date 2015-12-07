@@ -55,10 +55,13 @@ footer a {
 }
 
 
- nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
+nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
 	text-decoration: none;
 	color: #555;
+	cursor: pointer;
 }
+
+
 
  #main-content a, #main-content a:link, #main-content a:hover, #main-content a:active, #main-content a:visited  {
 	text-decoration: none;
