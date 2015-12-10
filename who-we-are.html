@@ -22,7 +22,6 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	
 	<!-- Read scripts -->
-	<script src="js/app.js"></script>
 	<script src="js/page1.js"></script>
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>
 	<link href="css/maddy.css" type="text/css" rel="stylesheet"/>
@@ -34,7 +33,7 @@
 		<nav>
 			<ul>
 				<li><a href="index.html#top">home</a></li>
-				<li><a href="who-we-are.html">who we are</a></li>
+				<li><a href="who-we-are.html#/">who we are</a></li>
 				<li><a href="what-we-do.html">what we do</a></li>
 				<li><a href="where-we-work.html">where we work</a></li>
 				<li><a href="get-involved.html">get involved</a></li>
@@ -46,22 +45,20 @@
 	</header>
 	<div class="col-md-3 nav2">
 		<ul>
-			<li>our mission</li>
-			<li>executive board</li>
-			<li>staff</li>
-			<li>task forces</li>
-			<li>partners</li>
-			<li>reports</li>
-			<li>contact</li>
+			<li ui-sref="landing">overview</li>
+			<li ui-sref="mission">our mission</li>
+			<li ui-sref="exec">executive board</li>
+			<li ui-sref="staff">staff</li>
+			<li ui-sref="taskForces">task forces</li>
+			<li ui-sref="partners">partners</li>
+			<li ui-sref="reports">reports</li>
+			<li ui-sref="comtact">contact</li>
 		</ul>
 	</div>
 	<div class="container col-md-9 content">
-		<p>Since 2003, The Uganda Village Project (UVP) has been working with the people of Iganga to promote public health and sustainable development in the rural communities of this marginalized district in southeast Uganda. Our organization represents a network of partnerships bridging disciplines and sectors. As an international nonprofit organization, we work directly with community based organizations (CBOs) and local government to utilize local knowledge and maximize community ownership of public health and development solutions.</p>
-		<p>To learn more, please watch the video below, explore the rest of our site, and contact us if you have any questions.</p>
+		<div ui-view></div>	
 	</div>
-	<div class="container video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/LQ2vKw75oCk" frameborder="0" allowfullscreen></iframe>
-	</div>
+	
 	<footer>
 		<p>{this is the footer text}</p>
 	</footer>
