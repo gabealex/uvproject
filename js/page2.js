@@ -18,6 +18,29 @@ var page2App = angular.module('page2App', ['ui.router'])
 			controller: 'HCController',
 		})
 
+		.state('malaria', {
+			url:'/malaria',
+			templateUrl: 'templates/malaria.html',
+			controller: 'MLController',
+		})
+
+		.state('aids', {
+			url:'/aids',
+			templateUrl: 'templates/aids.html',
+			controller: 'AidsController',
+		})
+
+		.state('wash', {
+			url:'/w.a.s.h.',
+			templateUrl: 'templates/WASH.html',
+			controller: 'washController',
+		})
+
+		.state('mother', {
+			url:'/safemotherhood',
+			templateUrl: 'templates/motherhood.html',
+			controller: 'momController',
+		})
 	})
 
 	// About page controller: define $scope.about as a string
