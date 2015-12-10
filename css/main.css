@@ -25,10 +25,15 @@ h1, h2, nav {
 	font-variant: small-caps;
 }
 
+<<<<<<< HEAD
 #whoWeAre p {
 	padding-bottom: 20px;
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6a387be7b5426d3e93fb53b2c5f4728660143c68
 #whoWeAre {
 	background-color: #555;
 	padding-left: 0;
@@ -39,6 +44,7 @@ h1, h2, nav {
 	height: 600px;
 }
 
+>>>>>>> 762c8ccea9cd333638b517cc0dabdd184990583a
 #whoWeAre button, #whoWeAre h2, #whoWeAre p {
 	padding: 10px;
 }
