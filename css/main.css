@@ -17,12 +17,17 @@ h1, h2, nav {
 
 #whoWeAre {
 	text-align: center;
-	padding-top: 40px;
+	padding-top: 20px;
 	padding-bottom: 40px;
 }
 
 #whoWeAre button {
 	font-variant: small-caps;
+}
+
+
+#whoWeAre p {
+	padding-bottom: 20px;
 }
 
 #whoWeAre {
@@ -56,6 +61,10 @@ nav {
 
 nav a, nav li a {
 	color: #aaa;
+		display: inline;
+	padding: 1em;
+	font-size: 16px;
+	font-variant: small-caps;
 }
 
 ul {
@@ -69,6 +78,32 @@ li {
 	padding: 1em;
 	font-size: 16px;
 	font-variant: small-caps;
+}
+
+#ComEd {
+	text-align: left;
+}
+
+#atwork{
+	text-align: left;
+}
+
+#healthcenters{
+	text-align: left;
+}
+
+#healthcenters li{
+	display: list-item;
+	text-align: left;
+	list-style-type: circle;
+
+}
+
+#atwork li{
+	display: list-item;
+	text-align: left;
+	list-style-type: circle;
+
 }
 
 .fadein { 
@@ -90,8 +125,19 @@ footer a {
 	font-variant: small-caps;
 	font-weight: 400;
 	font-size: 20px;
+	padding-left: .5em;
+	padding-right: .5em;
+	font-family: Montserrat;
 }
 
+footer {
+	bottom:10px;
+	border-top:1px solid #e3e3e3;
+	width:100%;
+	left:0px;
+	text-align:center;
+	padding:10px;
+}
 
 nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
 	text-decoration: none;
@@ -105,13 +151,6 @@ nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
 
 nav li:hover, nav a:hover {
 	color: #eee;
-}
-
-
-footer {
-	text-align: center;
-	font-size: 12px;
-	width: 100%;
 }
 
 
