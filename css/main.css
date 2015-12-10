@@ -25,15 +25,11 @@ h1, h2, nav {
 	font-variant: small-caps;
 }
 
-<<<<<<< HEAD
+
 #whoWeAre p {
 	padding-bottom: 20px;
 }
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6a387be7b5426d3e93fb53b2c5f4728660143c68
 #whoWeAre {
 	background-color: #555;
 	padding-left: 0;
@@ -44,7 +40,6 @@ h1, h2, nav {
 	height: 600px;
 }
 
->>>>>>> 762c8ccea9cd333638b517cc0dabdd184990583a
 #whoWeAre button, #whoWeAre h2, #whoWeAre p {
 	padding: 10px;
 }
@@ -66,6 +61,10 @@ nav {
 
 nav a, nav li a {
 	color: #aaa;
+		display: inline;
+	padding: 1em;
+	font-size: 16px;
+	font-variant: small-caps;
 }
 
 ul {
@@ -79,6 +78,28 @@ li {
 	padding: 1em;
 	font-size: 16px;
 	font-variant: small-caps;
+}
+
+#atwork{
+	text-align: left;
+}
+
+#healthcenters{
+	text-align: left;
+}
+
+#healthcenters li{
+	display: list-item;
+	text-align: left;
+	list-style-type: circle;
+
+}
+
+#atwork li{
+	display: list-item;
+	text-align: left;
+	list-style-type: circle;
+
 }
 
 .fadein { 
