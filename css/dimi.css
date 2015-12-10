@@ -29,6 +29,15 @@
 	width: 100%;
 }
 
+#bodyCorporate p {
+	text-align: center;
+	padding-right: 10%;
+	padding-left: 10%;
+
+	font-family: Raleway, Lato, 'Helvetica Neue', Helvetica, sans-serif;;
+	width: 100%;
+}
+
 #DimiMajorTasks {
 	background: #ddd;
 	width: 100%;
@@ -79,6 +88,20 @@ h1 {
 	padding: 10px;
 }
 
+#needToAddPic {
+	background-image: url("../img/child.jpg");
+	background-size: cover;
+	width: 100%;
+	min-height: 400px;
+}
+
+#healthCenterDiv {
+	background-image: url("../img/healthcenter1.jpg");
+	background-size: cover;
+	width: 70%;
+	min-height: 400px;
+}
+
 #DimiSkills {
 	background: #ddd;
 }
@@ -97,6 +120,24 @@ h1 {
 
 #launchTeamDiv {
 	background: #ddd;
+}
+
+#helpFundCover {
+
+	padding-top: 80px;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	width: 100%;
+	background-image: url('../img/hut2.jpg');
+	background-size: cover;
+	height: 600px;
+}
+
+#helpFundCover h2 {
+	font-size: 5em;
+	padding-left: 8em;
+	font-family: Montserrat;
 }
 
 
