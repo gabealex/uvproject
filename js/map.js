@@ -12,7 +12,6 @@ var drawMap = function(loc, zoom) {
 
 var getData = function(map) {
 
-  // Execute an AJAX request to get the data in data/response.js
 	var data;
 	$.ajax({
 	    url:"../data.json",
