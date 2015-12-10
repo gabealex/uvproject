@@ -162,3 +162,11 @@ nav li:hover, nav a:hover {
 #headerWWD {
 	height: 200px;
 }
+
+
+#WWDtitle{
+	color: white;
+	background-image: url("../img/hut3.jpg");
+	width: 100%;
+	height: 400px;
+}
