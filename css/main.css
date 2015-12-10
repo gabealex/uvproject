@@ -25,6 +25,19 @@ h1, h2, nav {
 	font-variant: small-caps;
 }
 
+<<<<<<< HEAD
+=======
+#whoWeAre {
+	background-color: #555;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	width: 100%;
+	background-image: url("https://notforsalecampaign.org/wp-content/uploads/2014/11/IMG_7222web-copy.jpg");
+	height: 600px;
+}
+
+>>>>>>> 762c8ccea9cd333638b517cc0dabdd184990583a
 #whoWeAre button, #whoWeAre h2, #whoWeAre p {
 	padding: 10px;
 }
