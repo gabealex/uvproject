@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uganda Village Project</title>
+	
+	<!-- Include libraries -->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+	<!-- UI Router -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+	<!-- leaflet libraries -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	
+	<!-- Read scripts -->
+	<script src="js/contentApp.js"></script>
+	<link href="css/main.css" type="text/css" rel="stylesheet"/>	
+	
+</head>
+<body>
+	<h1 class="title">UVP Content Manager</h1>
+        <div class="container-fluid">
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <div class="section" ng-repeat="section in sections"> 
+                    <h2>Section {{$index + 1}}
+                        <button tabindex="-1" type="button" class="btn btn-danger btn-sm section-remove" ng-click="removeSection($index)">
+                          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button> 
+                    </h2>
+                    <div class="question-container" ng-repeat="question in section.questions">
+                    <div><input class="question form-control input-lg" placeholder="Type your question..." ng-model="question.text"></input>
+                        <button tabindex="-1" type="button" class="btn btn-danger btn-sm" ng-click="removeQuestion(section, $index)">
+                          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button> 
+                    </div>
+                                        
+                    <div class="answer-container" ng-repeat="answer in question.answers" >
+                        <input class="form-control" placeholder="Type your answer..." ng-model="answer.text">
+                            <button tabindex=-1 type="button" class="btn btn-danger btn-sm" ng-click="removeAnswer(question, $index)">
+                              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button> 
+                            <button tabindex="-1" ng-class="{'btn-success':answer.correct == true}"type="button" class="btn btn-sm" ng-click="setCorrect(question, $index)">
+                              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            </button> 
+                        </input>
+                    </div>
+                    <button tabindex="-1" class="btn-sm btn btn-success answer-button" ng-click="addAnswer(question)">+ Answer</button>
+                </div>
+                
+                <button ng-click="newQuestion(section)" class="question-button btn btn-success">+ Question</button>
+                <button ng-if="!section.showVideo" ng-click="newVideo(section)" class="question-button btn btn-success">+ Video</button>
+                <div ng-if="section.showVideo">
+                    <input class="question video form-control input-lg" placeholder="Video URL..." ng-model="section.video"></input>
+                    <button tabindex=-1 type="button" class="btn btn-danger btn-sm" ng-click="removeVideo(section)">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button> 
+                </div>
+                
+                
+                <br/>
+                
+                </div>
+            <div><button id="add-section" ng-click="newSection()" class="question-button btn btn-success">+ Section</button></div>
+            <button id="save" ng-click="save()" class="btn btn-success">Save</button>            
+            <div id="saved" class="alert alert-success" role="alert">Saved</div>
+            
+            </div>
+            
+        </div>
+	<footer>
+		<p>{this is the footer text}</p>
+	</footer>
+</body>
+</html>
