@@ -19,6 +19,10 @@
 	padding-bottom: 20px;
 }
 
+#DimiInfoBody {
+	text-align: center;
+}
+
 #bodyCorporate {
 	text-align: center;
 	font-family: Raleway, Lato, 'Helvetica Neue', Helvetica, sans-serif;;
@@ -63,6 +67,38 @@ h1 {
 	font-size: 60px;
 	text-align: center;
 }
+
+#OffersOrDoesnt {
+	background: #ddd !important;
+	width: 100%;
+}
+
+#DimiInfoBody li{
+	display: block;
+	text-align: left;
+	padding: 10px;
+}
+
+#DimiSkills {
+	background: #ddd;
+}
+
+#BodyTeamRoles {
+	text-align: center;
+	width: 60%;
+}
+
+#BodyTeamRoles li {
+	padding: 10px;
+	display: block;
+	text-align: left;
+	font-variant: none;
+}
+
+#launchTeamDiv {
+	background: #ddd;
+}
+
 
 
 
