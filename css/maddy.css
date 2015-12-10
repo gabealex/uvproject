@@ -1,17 +1,43 @@
 h1 {
-	padding-top: 30px;
+	padding-top: 50px;
+	font-size: 60px;
+	color: #ddd;
 }
 
 .video {
 	text-align: center;
 	padding-bottom: 40px;
-	padding-top: 20px;
+	padding-top:40px;
 }
 
 header {
-	background-image: url('../img/kids.jpg');
+	background-image: url('../img/kids2.jpg');
 	background-size: cover;
 	background-repeat: none;
 	max-width: 100%;
 	min-height: 550px;
+	margin-bottom: 20px;
+}
+
+.nav2 li {
+	list-style-type: circle;
+	display: block;
+	padding: 10px;
+}
+
+.nav2 li {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav2 li:hover {
+	font-weight: 700;
+}
+
+.content {
+	padding-top: 30px;
+}
+
+footer {
+	bottom: 0;
 }
