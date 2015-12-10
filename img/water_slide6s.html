@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="verify-v1" content="dQopHI707ST4S5hd9vYU8MgwUgj+2K8jafxEgMuHHxQ=" />
+
+<title>The Well Construction Process &laquo;  Uganda Village Project</title>
+
+<link rel="shortcut icon" href="favicon.ico"> 
+
+<link rel="stylesheet" href="/wp-content/themes/UVP Home/reset.css" type="text/css" />
+<link rel="stylesheet" href="/wp-content/themes/UVP Home/style.css" type="text/css" />
+<link rel="stylesheet" href="/wp-content/themes/UVP Home/galleriffic.css" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="/wp-content/themes/UVP Home/superfish.css" /> 
+<link rel="stylesheet" type="text/css" media="screen" href="/wp-content/themes/UVP Home/superfish-navbar.css" />
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="/wp-content/themes/UVP Home/ie6.css" media="screen" type="text/css" />
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/UVP Home/hoverIntent.js"></script> 
+<script type="text/javascript" src="/wp-content/themes/UVP Home/superfish.js"></script>
+
+<script type="text/javascript" src="/wp-content/themes/UVP Home/jquery.galleriffic.js"></script>
+<script type="text/javascript" src="/wp-content/themes/UVP Home/jquery.history.js"></script>
+<script type="text/javascript" src="/wp-content/themes/UVP Home/jquery.opacityrollover.js"></script>
+
+<!-- Goodsearch code -->
+<script type="text/javascript">
+function GoGoodSearch_4()
+{
+	var charityid = 902515;
+	var siteURL = "ugandavillageproject.org";
+	var openNewWindow = true;
+	var searchtype = 'site';
+	var baseurl = "http://www.goodsearch.com/search.aspx";
+	var keywordsbox = document.getElementById("goodsearch_keywords_4");
+	if (typeof keywordsbox != "undefined")
+	{
+		var keywords = escape(keywordsbox.value);
+		var url = baseurl + "?Keywords=" + keywords;
+		if (charityid > 0)
+			url += "&CharityID=" + charityid;
+		url += "&Site=" + escape(siteURL);
+		url += "&Partner=goodsearch_syn";
+		url += "&typetag=" + escape(siteURL);
+		if (openNewWindow)
+			window.open(url,'SearchResults','height=700,width=900,location=1,status=1,toolbar=1,scrollbars=1,resizable=1');
+		else
+			window.location.href = url;
+	}
+}
+function CatchEnter_4(e)
+{
+	var key1 = "13";
+	var x = "";
+	if (document.all)
+	{
+		var evnt = window.event;
+		x = evnt.keyCode;
+	}
+	else
+		x = e.keyCode;
+	if (x == key1)
+	{
+		document.getElementById("goodsearch_submit_4").click();
+		return false;
+	}
+	else
+		return true;
+}
+
+jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+				$('div.content').css('display', 'block');
+
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.67;
+				$('#thumbs ul.thumbs li').opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         'fast',
+					exemptionSelector: '.selected'
+				});
+				
+				// Initialize Advanced Galleriffic Gallery
+				var gallery = $('#thumbs').galleriffic({
+					delay:                     2500,
+					numThumbs:                 20,
+					preloadAhead:              10,
+					enableTopPager:            true,
+					enableBottomPager:         true,
+					maxPagesToShow:            7,
+					imageContainerSel:         '#slideshow',
+					controlsContainerSel:      '#controls',
+					captionContainerSel:       '#caption',
+					loadingContainerSel:       '#loading',
+					renderSSControls:          true,
+					renderNavControls:         true,
+					playLinkText:              'Play Slideshow',
+					pauseLinkText:             'Pause Slideshow',
+					prevLinkText:              '&lsaquo; Previous Photo',
+					nextLinkText:              'Next Photo &rsaquo;',
+					nextPageLinkText:          'Next &rsaquo;',
+					prevPageLinkText:          '&lsaquo; Prev',
+					enableHistory:             true,
+					autoStart:                 false,
+					syncTransitions:           true,
+					defaultTransitionDuration: 900,
+					onSlideChange:             function(prevIndex, nextIndex) {
+						// 'this' refers to the gallery, which is an extension of $('#thumbs')
+						this.find('ul.thumbs').children()
+							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+							.eq(nextIndex).fadeTo('fast', 1.0);
+					},
+					onPageTransitionOut:       function(callback) {
+						this.fadeTo('fast', 0.0, callback);
+					},
+					onPageTransitionIn:        function() {
+						this.fadeTo('fast', 1.0);
+					}
+				});
+
+				/**** Functions to support integration of galleriffic with the jquery.history plugin ****/
+
+				// PageLoad function
+				// This function is called when:
+				// 1. after calling $.historyInit();
+				// 2. after calling $.historyLoad();
+				// 3. after pushing "Go Back" button of a browser
+				function pageload(hash) {
+					// alert("pageload: " + hash);
+					// hash doesn't contain the first # character.
+					if(hash) {
+						$.galleriffic.gotoImage(hash);
+					} else {
+						gallery.gotoIndex(0);
+					}
+				}
+
+				// Initialize history plugin.
+				// The callback is called at once by present location.hash. 
+				$.historyInit(pageload, "advanced.html");
+
+				// set onlick event for buttons using the jQuery 1.3 live method
+				$("a[rel='history']").live('click', function(e) {
+					if (e.button != 0) return true;
+					
+					var hash = this.href;
+					hash = hash.replace(/^.*#/, '');
+
+					// moves to a new page. 
+					// pageload is called at once. 
+					// hash don't contain "#", "?"
+					$.historyLoad(hash);
+
+					return false;
+				});
+
+				/****************************************************************************************/
+			});
+
+
+</script>
+
+<style>
+ 
+div#gallery{
+	height: 600px;
+}
+ 
+</style>
+
+<link rel="alternate" type="application/rss+xml" title="Uganda Village Project &raquo; Feed" href="http://www.ugandavillageproject.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Uganda Village Project &raquo; Comments Feed" href="http://www.ugandavillageproject.org/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.ugandavillageproject.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.ugandavillageproject.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.1.1' type='text/css' media='all' />
+<!-- This site uses the Yoast Google Analytics plugin v5.2.8 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-10431763-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Yoast Google Analytics -->
+<script type='text/javascript' src='http://www.ugandavillageproject.org/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://www.ugandavillageproject.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.ugandavillageproject.org/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.8'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ugandavillageproject.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.ugandavillageproject.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.1" />
+<link rel='canonical' href='http://www.ugandavillageproject.org/what-we-do/safe-water/wells/the-well-construction-process/' />
+<link rel='shortlink' href='http://www.ugandavillageproject.org/?p=1046' />
+<!-- <meta name="NextGEN" version="2.0.79" /> -->
+<link id='MediaRSS' rel='alternate' type='application/rss+xml' title='NextGEN Gallery RSS Feed' href='http://www.ugandavillageproject.org/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/ngglegacy/xml/media-rss.php' />
+<!-- Google Analytics Tracking by Google Analyticator 6.4.8: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-10431763-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+<body class="page page-id-1046 page-child parent-pageid-67 page-template page-template-well page-template-well-php">
+<div id="page">
+
+<div id="header">
+  <div id="logo"><a href="/"><img src="/wp-content/themes/UVP Home/images/uvp_logo.jpg" /></a></div>
+  <div id="topCont">
+    <div id="topSpec">
+      <div id="topRight"> <a href="/get-involved/donate/"><img src="/wp-content/themes/UVP Home/images/donate.png" /></a> </div>
+      <div id="topLeft">
+        <input
+        type="text"
+        name="goodsearch_keywords_4"
+        id="goodsearch_keywords_4"
+        onkeydown="return CatchEnter_4(event);"
+        style="width:230px;background-image:url('http://www.goodsearch.com/_gfx/title_yahoo_background.gif');background-repeat:no-repeat;margin-bottom:8px;"
+        onclick="this.style.backgroundImage='url(http://www.goodsearch.com/_gfx/spacer.gif)';"
+        onfocus="this.style.backgroundImage='url(http://www.goodsearch.com/_gfx/spacer.gif)';"
+        size="30"
+        />
+        <input
+        type="button"
+        name="goodsearch_submit_4"
+        id="goodsearch_submit_4"
+        value="Search"
+        onclick="GoGoodSearch_4();"
+        />
+      </div>
+    </div>
+    <div id="topNav">
+    
+      <ul class="sf-menu sf-navbar"><li class="page_item page-item-447 page_item_has_children"><a href="http://www.ugandavillageproject.org/who-we-are/">Who We Are</a>
+<ul class='children'>
+	<li class="page_item page-item-29"><a href="http://www.ugandavillageproject.org/who-we-are/our-mission-goals/">Our Mission</a></li>
+	<li class="page_item page-item-31"><a href="http://www.ugandavillageproject.org/who-we-are/board/">Executive Board</a></li>
+	<li class="page_item page-item-419"><a href="http://www.ugandavillageproject.org/who-we-are/staff/">Staff</a></li>
+	<li class="page_item page-item-629"><a href="http://www.ugandavillageproject.org/who-we-are/task-forces/">Task Forces</a></li>
+	<li class="page_item page-item-33"><a href="http://www.ugandavillageproject.org/who-we-are/partners/">Partners</a></li>
+	<li class="page_item page-item-49"><a href="http://www.ugandavillageproject.org/who-we-are/executive-summary/">Reports</a></li>
+	<li class="page_item page-item-37"><a href="http://www.ugandavillageproject.org/who-we-are/contact/">Contact</a></li>
+</ul>
+</li>
+<li class="page_item page-item-448 page_item_has_children current_page_ancestor"><a href="http://www.ugandavillageproject.org/what-we-do/">What We Do</a>
+<ul class='children'>
+	<li class="page_item page-item-39 page_item_has_children"><a href="http://www.ugandavillageproject.org/what-we-do/healthy-villages/">Healthy Villages</a></li>
+	<li class="page_item page-item-41 page_item_has_children current_page_ancestor"><a href="http://www.ugandavillageproject.org/what-we-do/safe-water/">Safe Water</a></li>
+	<li class="page_item page-item-59"><a href="http://www.ugandavillageproject.org/what-we-do/obstetric-fistula/">Obstetric Fistula</a></li>
+</ul>
+</li>
+<li class="page_item page-item-17 page_item_has_children"><a href="http://www.ugandavillageproject.org/where-we-work/">Where We Work</a>
+<ul class='children'>
+	<li class="page_item page-item-94 page_item_has_children"><a href="http://www.ugandavillageproject.org/where-we-work/photos/">Photos</a></li>
+	<li class="page_item page-item-3279"><a href="http://www.ugandavillageproject.org/where-we-work/in-the-news/">In the News</a></li>
+	<li class="page_item page-item-96"><a href="http://www.ugandavillageproject.org/where-we-work/videos/">Videos</a></li>
+	<li class="page_item page-item-55"><a href="http://www.ugandavillageproject.org/where-we-work/learn-lusoga/">Learn Lusoga</a></li>
+</ul>
+</li>
+<li class="page_item page-item-5 page_item_has_children"><a href="http://www.ugandavillageproject.org/get-involved/">Get Involved</a>
+<ul class='children'>
+	<li class="page_item page-item-204 page_item_has_children"><a href="http://www.ugandavillageproject.org/get-involved/summer-internships/">Internships</a></li>
+	<li class="page_item page-item-201"><a href="http://www.ugandavillageproject.org/get-involved/job/">Jobs and Volunteer Positions</a></li>
+	<li class="page_item page-item-996"><a href="http://www.ugandavillageproject.org/get-involved/fundraising-and-media-center/">Help us Fundraise</a></li>
+	<li class="page_item page-item-1065"><a href="http://www.ugandavillageproject.org/get-involved/sponsorship-information/">Corporate Involvement</a></li>
+</ul>
+</li>
+<li class="page_item page-item-21"><a href="http://www.ugandavillageproject.org/donate/">Donate</a></li>
+</ul>      <script type="text/javascript"> 
+ 
+							$(document).ready(function(){ 
+								$("ul.sf-menu").superfish({ 
+									pathClass:  'current_page_ancestor' 
+								}); 
+							}); 
+						 
+						</script>
+    </div>
+  </div>
+  </div>
+  <div class="clr"></div>
+  <div id="whitebox">
+
+  <div id="gallery" class="content">
+
+      <div id="controls" class="controls"></div>
+	  <div class="slideshow-container">
+      	<div id="loading" class="loader"></div>
+		<div id="slideshow" class="slideshow"></div>
+	  </div>
+	  <div id="caption" class="caption-container"></div>
+  </div>
+  
+  <div id="thumbs" class="navigation">
+        <ul class="thumbs noscript">
+        <li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide1s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/well-thumb.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+                <b>Drinking from the Swamp:</b> Iganga, Uganda is one of the poorest districts in the country. Water-borne illnesses are among the leading causes death due to a complete lack of municipal water infrastructure, over population and less than 50% latrine coverage. In the villages, most people get their water directly from swamps and streams. Often stagnant, the people of Iganga are dependent upon these contaminated sources to survive.
+            </div>
+        </li>
+        
+        <li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide2s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb2.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Miles to Water:</b>  Children, most often young girls, are responsible for fetching water for all household needs.  Lugging bright yellow jerricans full of water two or three miles is not uncommon, and the job of simply moving back and forth can occupy the majority of each day.
+            </div>
+        </li>
+        
+        <li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide3s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb3.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Leading to Water:</b>  Uganda Village Project (UVP), a US-based NGO, works with communities in Iganga to help them innovate grass-roots solutions for their development needs. Working in partnership with village leaders, local government, Community Based Organizations (CBOs) and international donors, UVP designed the Community Constructed Shallow Well model to address the vital need for safe water. In this photo, the community of Busiringi deliberates on how best to organize their people for the upcoming construction.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide4s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb4.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Circle Marks the Spot:</b> UVP teams up with CBOs that are working actively in this region to identify committed villages and help guarantee long-term sustainability. The CBOs' contribution in terms of organizing and transport cover about 5% of the costs of the project. Once communities have organized themselves, elected a Water User Committee and donated land for construction, UVP and the local government provide technicians to site the well and lead construction. Here, a water engineer assisted by the local mason in Kimanto uses sticks and a vine to measure out the appropriate dimensions for the new well.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide5s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb5.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Young Masons:</b>  As construction ramps up, materials purchased with money from international donors arrive on site. This model harnesses the wealth of the village and the resources available from local government and CBOs so that all told, only 25% of construction costs come from outside donors. Here, a team of boys in Busiringi gather the binding wire, rebar and wire mesh needed for the concrete work that will reinforce and cap the well.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide6s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb6.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Digging In:</b>  The villagers do all the construction themselves with a mason on-site at all times for directing the work and periodic supervision by the District’s water engineer. Depending on the soil conditions, teams can excavate three meters or more in a single day.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide7s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb7.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>The Weaker Sex?</b>  As the men dig, the women not only cook the meals needed to sustain the work, they also gather all of the locally available materials (sand, gravel and bricks) that are essential for building the internal supports and concrete slab for the well. These contributions all further reduce the need for outside assistance. Here, a team of women deliver sand to a work site in Busanda.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide8s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb8.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Reinforcement:</b>  Once they hit the water table, the villagers must build up the brick interior of the well to guard against collapse and to help filter sediment out of the water. As with every stage of the construction process, teamwork is essential.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide9s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb9.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Bail out:</b>  Though they have hit water, in order to guarantee that the well will continue providing even in the driest of dry seasons, the community still must dig 1-2 meters farther.  To do this, teams must simultaneously dig deeper while bailing out the water.  These last few meters can take several days to achieve.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide10s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb10.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Development from the Bottom Up:</b>  Iganga is fortunate to have a very high water table which is what makes this construction model possible.  Shallow wells are generally 8-10 meters deep, and the excavation usually lasts less then two weeks.  However, this is all possible because the community members believe that safe water sources are one of their greatest needs and as such, they are willing to work together and to contribute their labor and resources to the effort.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide11s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb11.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Heave-ho!:</b>  Once excavation is complete, a concrete slab is poured on-site.  Here, under the direction of the District’s water engineer, community members in Nsinze are moving to cap their well.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide12s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb12.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Installation:</b>  The District government is simply incapable of responding to all the need in Iganga, and this is one of the reasons that they have welcomed the Community Constructed Shallow Well model.  As a sign of support and encouragement, they donate all of the technical parts required for each well, roughly 10% of construction costs.  Here, District water personnel install the pump as leaders of the community look on quizzically.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide13s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb13.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Fencing:</b>  To help protect the new well from livestock and roughhousing children, a fence is constructed around its perimeter.  Here, the village mayor of Busiringi and his wife prepare branches to be used as part of the fence.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide14s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb14.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Instruction:</b>  As the well pump is installed, members of the villages’ Water User Committee are trained in basic upkeep and management.  Additionally, they are given the responsibility to collect water user fees that will cover the costs of ongoing maintenance.  Here, operation of the well is explained to several of the men of Kimanto while curious children look on.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide15s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb15.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Pride:</b>  All told, more than 60% of the costs of these wells are covered by the contributions of the community members in terms of land, labor, locally available materials, food and shelter for the masons.  The finished product belongs to and is the responsibility of the community.
+            </div>
+        </li>
+<li>
+            <a class="thumb" name="optionalCustomIdentifier" href="/wp-content/uploads/2010/03/water_slide16s.jpg" title="Water">
+                <img src="/wp-content/uploads/2010/03/water_thumb16.jpg" alt="well thumb" />
+            </a>
+            <div class="caption">
+            <b>Celebration:</b>  The completion of each well closes with a village-wide celebration complete with singing, dancing, eating and - most importantly – drinking from the newly completed source.  Successful development projects such as these help to bolster the cohesion of the group and make possible further efforts in the long-run.
+            </div>
+        </li>
+    </ul>
+  </div>  
+<div class="clear"></div>
+  <p class="small">This award winning photo essay detailing the well construction process was created by Benjamin Krause.</p> 
+<hr />
+<div id="footer">
+
+   &copy; 2009 Uganda Village Project, a 501c3 organization | <a href="/who-we-are/contact/">Contact Us</a> | <a href="http://www.twitter.com/uvp" target="_blank"><img src="/wp-content/themes/UVP Home/images/twit_small.png"> follow us on Twitter</a>
+
+</div></div>
+</div>
+
+		<!-- ngg_resource_manager_marker --><script type='text/javascript' src='http://www.ugandavillageproject.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.ugandavillageproject.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.ugandavillageproject.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.1.1'></script>
+<!-- Powered by WPtouch: 3.7.5.3 -->        
+<br /><br />
+</body>
+</html>
+
