@@ -71,19 +71,19 @@ li {
 	font-variant: small-caps;
 }
 
-.fadein { 
-	position:relative; 
-	width:100%; 
-	height:450px; 
+.fadein {
+	position:relative;
+	width:100%;
+	height:450px;
 	z-index: 10;
 }
 
-.fadein img { 
+.fadein img {
 	position:absolute;
-	width: 100%; 
-	height: 450px; 
-	left:0; 
-	top:0; 
+	width: 100%;
+	height: 450px;
+	left:0;
+	top:0;
 }
 
 footer a {
@@ -118,3 +118,32 @@ footer {
 #headerWWD {
 	height: 200px;
 }
+li {
+	display:block;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+header li {
+	display: inline;
+}
+br {
+	line-height: .939em;
+}
+#questions {
+	float: left;
+	width: 50%;
+}
+#answers {
+	marigin-left: 20%;
+}
+
+
+
+
+
+/*header {
+	height: 200px;
+	color: white;
+	background-image: url("../img/children.jpg");
+}*/
