@@ -37,3 +37,7 @@ header {
 .content {
 	padding-top: 30px;
 }
+
+footer {
+	bottom: 0;
+}
