@@ -17,13 +17,13 @@
 	<!-- UI Router -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
-	<!-- leaflet libraries -->
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	
 	
 	<!-- Read scripts -->
 	<script src="js/app.js"></script>
 	<script src="js/page3.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/landing.js"></script>
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>	
 	
 </head>
@@ -31,23 +31,54 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="index.html#top">home</a></li>
-				<li><a href="who-we-are.html">who we are</a></li>
-				<li><a href="what-we-do.html">what we do</a></li>
-				<li><a href="where-we-work.html">where we work</a></li>
-				<li><a href="get-involved.html">get involved</a></li>
-				<li><a href='http://www.cafepress.com/uvp' target='_blank'>store</a></li>
-				<li><a href='https://donatenow.networkforgood.org/uvp?code=Website' target='_blank'>donate</a></li>
+				<li><a href="index.html#top" style="color:white;">home</a></li>
+				<li><a href="who-we-are.html"style="color:white;">who we are</a></li>
+				<li><a href="what-we-do.html"style="color:white;">what we do</a></li>
+				<li><a href="where-we-work.html"style="color:white;">where we work</a></li>
+				<li><a href="get-involved.html"style="color:white;">get involved</a></li>
+				<li><a href='http://www.cafepress.com/uvp' target='_blank'style="color:white;">store</a></li>
+				<li><a href='https://donatenow.networkforgood.org/uvp?code=Website' target='_blank'style="color:white;">donate</a></li>
 			</ul>
 		</nav>
-		<h1>Uganda Village Project</h1>
-	</header>
-	<div id='whereWeWork' class="container">
-		<h2>Where We Work</h2>
-		<p>With a population approaching 700,000, Iganga District is one of the most densely populated of Uganda.  In spite of that fact, Iganga District boasts only one town, Iganga town, which for a long time was the largest in the country without running water or public sewage systems.</p>
 
-		<p>Located in the middle of the Busoga region of the Basoga people, Iganga District is one of the more marginalized of the country and as a result it is among the poorest. Lusoga, a Bantu language closely related to the national language, Luganda, is what most people in the region speak. Those who attend formal schooling, particularly secondary school, also learn English as well as formal Luganda. The rural economy of Iganga depends heavily on maize, potatoes, and sugar cane.</p>   
+		<div id ="WWWtitle" class="container">
+			<h1>Where We Work</h1>
+	    	<p>With a population approaching 700,000, Iganga District is one of the most densely populated of Uganda.  In spite of that fact, Iganga District boasts only one town, Iganga town, which for a long time was the largest in the country without running water or public sewage systems.</p>
+
+			<p>Located in the middle of the Busoga region of the Basoga people, Iganga District is one of the more marginalized of the country and as a result it is among the poorest. Lusoga, a Bantu language closely related to the national language, Luganda, is what most people in the region speak. Those who attend formal schooling, particularly secondary school, also learn English as well as formal Luganda. The rural economy of Iganga depends heavily on maize, potatoes, and sugar cane.</p>
+		</div>
+	</header>
+
+	<!-- leaflet libraries -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+
+	<div class="container col-sm-8">
+		<div class="container" id="map">
+ 			<script type="text/javascript">drawMap([1.0667, 31.8833], 7)</script>
+		</div>
+		<!-- <img id="workmap" src="img/wwwmap,.jpg" /> -->
 	</div>
+	
+	<div id = "HVbuttons" style="text-align: center;">
+    	<a ui-sref="learn"class="btn btn-default">Learn the language</a>
+    	<a ui-sref="press"class="btn btn-default">Press</a>
+  	</div>
+
+    <div class="container">
+    	<div ui-view></div>
+	</div>
+
+<div id="cp_widget_e9140b80-9eae-4f5e-9d9b-34aea09556b7"class="container"style="width:760px;height:640px">...</div>
+<script type="text/javascript">
+var cpo = []; cpo["_object"] ="cp_widget_e9140b80-9eae-4f5e-9d9b-34aea09556b7"; cpo["_fid"] = "A0FA1K9P7UFV";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting for Business</a> solution.</noscript>
+
+
 	<footer>
 		<p>{this is the footer text}</p>
 	</footer>
