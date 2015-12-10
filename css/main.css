@@ -121,8 +121,19 @@ footer a {
 	font-variant: small-caps;
 	font-weight: 400;
 	font-size: 20px;
+	padding-left: .5em;
+	padding-right: .5em;
+	font-family: Montserrat;
 }
 
+footer {
+	bottom:10px;
+	border-top:1px solid #e3e3e3;
+	width:100%;
+	left:0px;
+	text-align:center;
+	padding:10px;
+}
 
 nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
 	text-decoration: none;
@@ -136,13 +147,6 @@ nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
 
 nav li:hover, nav a:hover {
 	color: #eee;
-}
-
-
-footer {
-	text-align: center;
-	font-size: 12px;
-	width: 100%;
 }
 
 
