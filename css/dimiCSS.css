@@ -137,6 +137,20 @@ br {
 #answers {
 	marigin-left: 20%;
 }
+h1 {
+	text-align: center;
+}
+#getInvolvedIMG {
+	background-color: #555;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	width: 100%;
+	background-image: url('https://notforsalecampaign.org/wp-content/uploads/2014/11/IMG_7222web-copy.jpg');
+	height: 600px;
+}
+
+
 
 
 
