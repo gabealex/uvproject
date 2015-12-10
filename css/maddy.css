@@ -1,0 +1,17 @@
+h1 {
+	padding-top: 30px;
+}
+
+.video {
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 20px;
+}
+
+header {
+	background-image: url('../img/kids.jpg');
+	background-size: cover;
+	background-repeat: none;
+	max-width: 100%;
+	min-height: 550px;
+}

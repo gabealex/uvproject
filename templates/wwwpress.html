@@ -1,58 +1,12 @@
 <div class="container">
-	<div id="fistula">
-		<h3>Breaking Obstetric Fistula</h3>
-		<div class="container col-sm-4">
-			<!-- image for 1st article -->\
-			<!-- link to "Fistula1_2013.pdf" -->
+		<h3 style="text-align:center;"><i>People know you for what you've done, not for what you plan to do</i></h3>
+		<br>
+		<div class="container">
+			<div ng-repeat="article in press" class="container col-sm-4">
+				<a href="{{article.link}}" target='_blank'><img style="height:240px; width:240px;" src="{{article.img}}" /></a>	
+	   			<p>Title: "{{article.title}}"</p>
+	   			<p>Source: {{article.Source}}</p>
+	   			<p>Year published: {{article.year}}</p>
+			</div>
 		</div>
-		<div class="container col-sm-4">
-			<!-- image for 2nd article -->\
-			<!-- link to "Fistula2_2013.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 3rd article -->\
-			<!-- link to "Fistula3_2013.pdf" -->
-		</div>
-	</div>
-	<div id="healthyvillage">
-		<h3>Healthy Villages</h3>
-		<div class="container col-sm-4">
-			<!-- image for 1st article -->\
-			<!-- link to "HIV_2013.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 2nd article -->\
-			<!-- link to "HIV2_2013.pdf" -->
-		</div>
-	</div>
-	<div id="safewater">
-		<h3>Keeping Water Safe</h3>
-		<div class="container col-sm-4">
-			<!-- image for 1st article -->\
-			<!-- link to "safewater1_2009.pdf" -->
-		</div>
-	</div>
-	<div id="uvpress">
-		<h3>From Our Very Own</h3>
-		<div class="container col-sm-4">
-			<!-- image for 1st article -->\
-			<!-- link to "uvp1_2013.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 2nd article -->\
-			<!-- link to "uvp2_2012.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 3rd article -->\
-			<!-- link to "uvp3_2011.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 4th article -->\
-			<!-- link to "uvp4_2009.pdf" -->
-		</div>
-		<div class="container col-sm-4">
-			<!-- image for 5th article -->\
-			<!-- link to "uvp5_2007.pdf" -->
-		</div>
-	</div>
 </div>
