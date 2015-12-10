@@ -61,7 +61,7 @@ nav {
 
 nav a, nav li a {
 	color: #aaa;
-		display: inline;
+	display: inline;
 	padding: 1em;
 	font-size: 16px;
 	font-variant: small-caps;
@@ -78,6 +78,43 @@ li {
 	padding: 1em;
 	font-size: 16px;
 	font-variant: small-caps;
+}
+
+footer a {
+	font-variant: small-caps;
+	font-weight: 400;
+	font-size: 20px;
+	padding-left: .5em;
+	padding-right: .5em;
+	font-family: Montserrat;
+}
+
+footer {
+	bottom:10px;
+	border-top:1px solid #e3e3e3;
+	width:100%;
+	left:0px;
+	text-align:center;
+	padding:10px;
+}
+
+nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#main-content a, #main-content a:link, #main-content a:hover, #main-content a:active, #main-content a:visited  {
+	text-decoration: none;
+	color: #000;
+}
+
+nav li:hover, nav a:hover {
+	color: #eee;
+}
+
+
+#headerWWD {
+	height: 200px;
 }
 
 #ComEd {
@@ -119,41 +156,4 @@ li {
 	height: 450px; 
 	left:0; 
 	top:0; 
-}
-
-footer a {
-	font-variant: small-caps;
-	font-weight: 400;
-	font-size: 20px;
-	padding-left: .5em;
-	padding-right: .5em;
-	font-family: Montserrat;
-}
-
-footer {
-	bottom:10px;
-	border-top:1px solid #e3e3e3;
-	width:100%;
-	left:0px;
-	text-align:center;
-	padding:10px;
-}
-
-nav li, nav a, nav a:link, nav a:hover, nav a:active, nav a:visited  {
-	text-decoration: none;
-	cursor: pointer;
-}
-
-#main-content a, #main-content a:link, #main-content a:hover, #main-content a:active, #main-content a:visited  {
-	text-decoration: none;
-	color: #000;
-}
-
-nav li:hover, nav a:hover {
-	color: #eee;
-}
-
-
-#headerWWD {
-	height: 200px;
 }
