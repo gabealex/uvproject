@@ -30,11 +30,13 @@ var customBuild = function(data, map) {
     var name = d["Name"];
     var descr = d["descr"];
 
+    var content = "Name: " + name + "<br>" + "Description: " + descr;
+
     var mark = new L.circleMarker([d.latitude, d.longitude], {
-      radius: 5,
+      radius: 20,
       color: "green"
     });
-    mark.bindPopup(descr);
+    mark.bindPopup(content);
     location.push(mark);
   });
 

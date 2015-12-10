@@ -11,15 +11,21 @@ var myApp = angular.module('page3App', ['ui.router'])
 			templateUrl: 'templates/wwwpress.html',
 			controller: 'pressController',
 		})
+		.state('photo', {
+			url:'/photo',
+			templateUrl: 'templates/wwwphoto.html',
+			controller: 'photoController',
+		})
 
 	})
 
 	.controller('learnController', function($scope){
-		$scope.AtWork = "info";
 	})
 
 	.controller('pressController', function($scope, $http){
 		$http.get("press.json").success(function(response){
 	    	$scope.press = response;
 	    });
+	})
+	.controller('photoController', function($scope){
 	})
