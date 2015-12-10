@@ -20,6 +20,8 @@ nav {
 	width: 100%;
 	z-index: 1000;
 	text-align: right;
+	background-color: black;
+	opacity: .8;
 }
 
 ul {
@@ -38,13 +40,13 @@ li {
 .fadein { 
 	position:relative; 
 	width:100%; 
-	height:332px; 
+	height:450px; 
 }
 
 .fadein img { 
 	position:absolute;
 	width: 100%; 
-	height: 332px; 
+	height: 450px; 
 	left:0; 
 	top:0; 
 }
@@ -77,49 +79,7 @@ h1 {
 }
 
 
-#healthyvillages {
-	height: 350px;
-	width:350px;
-	color: white;
-	background-image: url("../img/transform2.jpg");
-}
 
-
-#safewater {
-	height: 350px;
-	width:350px;
-	color: white;
-	background-image: url("../img/sanitation2.jpg");
-}
-
-#obfi {
-	height: 350px;
-	width:350px;
-	color: white;
-	background-image: url("../img/kids_soccer.jpg");
-	background-position: fixed;
-}
-
-#overlay1 {
-	height: 350px;
-	width:350px;
- 	background-color: black;
-	opacity: 0.6;
-}
-
-#overlay2 {
-	height: 350px;
-	width:350px;
- 	background-color: black;
- 	opacity: 0.6;
-}
-
-#overlay3 {
-	height: 350px;
-	width:350px;
- 	background-color: black;
- 	opacity: 0.6;
-}
 
 
 footer {
@@ -129,8 +89,6 @@ footer {
 }
 
 
-/*header {
+#headerWWD {
 	height: 200px;
-	color: white;
-	background-image: url("../img/children.jpg");
-}*/
+}
