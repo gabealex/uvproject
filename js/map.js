@@ -14,7 +14,7 @@ var getData = function(map) {
 
 	var data;
 	$.ajax({
-	    url:"../data.json",
+	    url:"data.json",
 	    type: "get",
 	    success:function(data) {
     		customBuild(data, map);
